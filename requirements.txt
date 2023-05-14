@@ -1,0 +1,8 @@
+numpy>=1.24.*
+Pillow>=9.*
+pandas>=2.0.*
+matplotlib>=3.7.*
+keras>=2.*
+tensorflow>=2.*
+opencv-python-headless>=4.7.*
+urllib3==2.0
