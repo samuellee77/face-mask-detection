@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import logging as log
 from PIL import Image
 import matplotlib.pyplot as plt
 from keras import models
@@ -17,6 +18,7 @@ def main():
     faceCascade = cv2.CascadeClassifier(cascPath)
     uploaded_file = st.file_uploader("Choose a file", type=["png","jpg","jpeg"])
     if uploaded_file is not None:
+        log.info(f"The filename is {uploaded_file.name}")
         image = Image.open(uploaded_file)
         image = np.array(image)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
